@@ -13,4 +13,4 @@ Healthy Playbook merupakan platform inovatif berupa direktori cerdas yang menghu
 Tujuan utama karya ini adalah menjadi "kompas digital" yang mengintegrasikan kearifan lokal Nusantara dengan teknologi modern melalui fitur Asisten Cerdas (HerbaBot). Fitur ini mampu memberikan rekomendasi medis yang akurat berdasarkan input keluhan pengguna secara real-time. Manfaat dari website ini adalah terciptanya User Experience (UX) yang inklusif dan mudah dinavigasi, tervalidasinya produk secara aman, dan terwujudnya masyarakat sehat alami sekaligus memajukan roda perkenomian UMKM lokal di sektor kesehatan.
 
 ## Link Website
-[Tulis link deploy di sini nanti, contoh: https://healthy-playbook.vercel.app]
+[healthyplaybook.vercel.app]
