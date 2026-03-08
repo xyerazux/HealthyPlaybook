@@ -1,4 +1,4 @@
-/* LOGIK AI & KNOWLEDGE BASE DENGAN ALASAN MEDIS */
+/* LOGIK AI & KNOWLEDGE BASE */
 const chatBox = document.getElementById('chatBox');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
@@ -6,7 +6,7 @@ const sendBtn = document.getElementById('sendBtn');
 const knowledgeBase = {
     "tidur": "Untuk masalah susah tidur, aku merekomendasikan Teh Seduh Chamomile. Teh ini mengandung apigenin, yaitu antioksidan kuat yang mengikat reseptor di otak untuk memicu rasa kantuk dan relaksasi. Seduh air hangat 30 menit sebelum tidur ya.",
     "insomnia": "Untuk insomnia, aku merekomendasikan Teh Seduh Chamomile. Karena bebas kafein dan mengandung apigenin, teh ini sangat aman untuk menenangkan sistem saraf sebelum tidur.",
-    "batuk": "Batuk & radang bisa diredakan dengan Jahe Merah Instan. Alasannya, jahe merah mengandung gingerol tingkat tinggi yang berfungsi sebagai anti-inflamasi alami untuk melegakan tenggorokan. Bisa dibeli di waruhg/apotek terdekat.",
+    "batuk": "Batuk & radang bisa diredakan dengan Jahe Merah Instan. Alasannya, jahe merah mengandung gingerol tingkat tinggi yang berfungsi sebagai anti-inflamasi alami untuk melegakan tenggorokan. Bisa dibeli di apotek terdekat.",
     "radang": "Batuk & radang bisa diredakan dengan Jahe Merah Instan karena kandungan gingerolnya bertindak sebagai analgesik alami.",
     "pegal": "Pegal-pegal atau tegang otot? Coba gunakan Minyak Urut Sereh Wangi. Ekstrak citronella di dalamnya efektif memberikan efek hangat yang menembus pori-pori dan melancarkan sirkulasi darah perifer.",
     "imun": "Untuk menjaga daya tahan tubuh, Madu Hutan Tropis sangat cocok. Madu murni kaya akan flavonoid dan enzim diastase yang terbukti klinis meningkatkan respon imun alami tubuh.",
@@ -20,7 +20,7 @@ const knowledgeBase = {
     "gula darah": "Untuk menstabilkan gula darah, Diagard adalah suplemen yang pas karena bekerja langsung di tingkat metabolisme sel. Dapatkan di apotek resmi.",
     "asam urat": "Nyeri asam urat/encok? Gunakan Paket Herbal Asam Urat De Nature. Ramuan ini bekerja dengan cara meluruhkan kristal purin yang menumpuk di persendian melalui saluran kemih.",
     "encok": "Nyeri sendi atau encok bisa diredakan dengan Paket Herbal Asam Urat De Nature karena sifat diuretik alaminya.",
-    "default": "Maaf, aku belum menemukan rekomendasi herbal yang spesifik untuk itu. Coba sebutkan keluhan utamanya (contoh: maag, gatal, asam urat, atau susah tidur). Seluruh produk rekomendasi kami tervalidasi dan bisa didapatkan di warung/apotek."
+    "default": "Maaf, aku belum menemukan rekomendasi herbal yang spesifik untuk itu. Coba sebutkan keluhan utamanya (contoh: maag, gatal, asam urat, atau susah tidur). Seluruh produk rekomendasi kami tervalidasi dan bisa didapatkan di apotek."
 };
 
 function appendMessage(sender, text) {
@@ -65,12 +65,11 @@ if(formMitra) {
     });
 }
 
-/* LOGIK PAGINASI */
+/* LOGIK PAGINASI & ANIMASI SCROLL (INTERSECTION OBSERVER) */
 document.addEventListener("DOMContentLoaded", function() {
     const products = document.querySelectorAll('.product-item');
     const paginationUI = document.getElementById('paginationUI');
     let currentPage = 1;
-    
     let itemsPerPage = window.innerWidth < 768 ? 4 : 8; 
 
     function getTotalPages() { return Math.ceil(products.length / itemsPerPage); }
@@ -79,8 +78,19 @@ document.addEventListener("DOMContentLoaded", function() {
         currentPage = page;
         const start = (page - 1) * itemsPerPage;
         const end = start + itemsPerPage;
+        
         products.forEach((product, index) => {
-            product.style.display = (index >= start && index < end) ? 'block' : 'none';
+            if (index >= start && index < end) {
+                product.style.display = 'block';
+                // Trigger animasi reveal saat pindah halaman
+                const card = product.querySelector('.reveal');
+                if(card) {
+                    card.classList.remove('active');
+                    setTimeout(() => card.classList.add('active'), 50);
+                }
+            } else {
+                product.style.display = 'none';
+            }
         });
         renderPaginationUI();
     }
@@ -120,4 +130,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     showPage(1);
+
+    // FUNGSI ANIMASI SCROLL (Mendeteksi elemen masuk layar)
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOptions = {
+        threshold: 0.1, // Berjalan saat 10% elemen terlihat
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // observer.unobserve(entry.target); // Hapus komen ini jika animasi hanya ingin 1x saja
+            }
+        });
+    }, revealOptions);
+
+    reveals.forEach(reveal => {
+        revealOnScroll.observe(reveal);
+    });
 });
