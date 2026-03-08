@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Playbook | Katalog UMKM Kesehatan</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand fw-bold text-success d-flex align-items-center">
+                <img src="assets/img/logo.png" alt="Logo" width="35" height="35" class="me-2 rounded-circle shadow-sm">
+                Healthy Playbook
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a href="#home" class="nav-link active" aria-current="page">Beranda</a></li>
+                    <li class="nav-item"><a href="#katalog" class="nav-link">Katalog Produk</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Tentang Kami</a></li>
+                    <li class="nav-item"><a href="#mitra" class="nav-link">Pendaftaran Mitra</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 mt-4" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="display-4 fw-bold text-dark mb-3">Your Ultimate Guide To <br><span class="text-success">Local Wellness.</span></h1>
+                    <p class="lead text-secondary mb-4 pe-lg-5">Temukan solusi kesehatan alami dari UMKM Indonesia yang tervalidasi. Mulai hidup sehatmu dan dukung kemajuan ekonomi lokal bersama Healthy Playbook.</p>
+                    <div class="row g-2 w-100">
+                        <div class="col-6 col-md-auto">
+                            <a href="#katalog" class="btn btn-success btn-lg w-100 px-lg-4 rounded-pill shadow-sm hero-btn d-flex align-items-center justify-content-center h-100">Jelajahi Katalog</a>
+                        </div>
+                        <div class="col-6 col-md-auto">
+                            <a href="#bot" class="btn btn-outline-success btn-lg w-100 px-lg-4 rounded-pill shadow-sm hero-btn d-flex align-items-center justify-content-center h-100">Konsultasi Keluhan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="assets/img/ilustrasi.png" alt="Ilustrasi" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bot" class="py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-success">Konsultasi Keluhan Anda</h2>
+                <p class="text-secondary">Ceritakan keluhan kesehatanmu, asisten cerdas kami akan merekomendasikan solusi herbal terbaik beserta alasannya.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card glass-effect shadow-sm border-0 rounded-4">
+                        <div class="card-header bg-success text-white rounded-top-4 py-3">
+                            <h5 class="mb-0 fw-bold">Asisten Healthy Playbook</h5>
+                        </div>
+                        <div id="chatBox" class="card-body" style="background: rgba(255,255,255,0.4);">
+                            <div class="d-flex justify-content-start mb-3">
+                                <div class="bot-message shadow-sm">Halo! Aku asisten cerdas dari Healthy Playbook. Apakah ada keluhan yang sedang anda rasakan hari ini? (misal: Maag, Gatal, Asam urat, dll)</div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 py-3 rounded-bottom-4">
+                            <div class="input-group">
+                                <input type="text" id="userInput" class="form-control rounded-pill me-2 border-0 shadow-sm" placeholder="Ketik keluhanmu di sini..." autocomplete="off">
+                                <button class="btn btn-success rounded-pill px-4 shadow-sm" id="sendBtn">Kirim</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="katalog" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-success">Katalog Produk Mitra UMKM</h2>
+                <p class="text-secondary">Pilihan herbal terbaik yang tervalidasi untuk menunjang kesehatanmu</p>
+            </div>
+            
+            <div class="row g-3 g-md-4" id="productContainer">
+                
+                <div class="col-6 col-md-4 col-lg-3 product-item">
+                    <div class="card glass-effect border-0 rounded-4 overflow-hidden product-card shadow-sm">
+                        <img src="assets/img/tehchamomile.png" alt="Teh Chamomile" class="card-img-top product-img">
+                        <div class="card-body">
+                            <div>
+                                <p class="mb-1"><span class="badge bg-success bg-opacity-75">Kategori: Relaksasi</span></p>
+                                <span class="badge bg-success mb-2 d-inline-block">Peningkat Kualitas Tidur</span>
+                            </div>
+                            <h5 class="card-title fw-bold title-clamp">Teh Seduh Chamomile</h5>
+                            <p class="card-text text-secondary small mb-2">UMKM Sari Alam</p>
+                            <div class="flex-grow-1">
+                                <p class="card-text d-none d-md-block text-secondary small desc-clamp">Membantu merelaksasi pikiran dan membuat tidur nyenyak.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3 pt-0 mt-auto">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalTeh" class="btn btn-outline-success w-100 rounded-pill">Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3 product-item">
+                    <div class="card glass-effect border-0 rounded-4 overflow-hidden product-card shadow-sm">
+                        <img src="assets/img/image.png" alt="Jahe Merah" class="card-img-top product-img">
+                        <div class="card-body">
+                            <div>
+                                <p class="mb-1"><span class="badge bg-success bg-opacity-75">Kategori: Pernapasan</span></p>
+                                <span class="badge bg-success mb-2 d-inline-block">Pereda Batuk</span>
+                            </div>
+                            <h5 class="card-title fw-bold title-clamp">Jahe Merah Instan</h5>
+                            <p class="card-text text-secondary small mb-2">UMKM Berkah Jahe</p>
+                            <div class="flex-grow-1">
+                                <p class="card-text d-none d-md-block text-secondary small desc-clamp">Mengandung senyawa gingerol ampuh melegakan tenggorokan.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3 pt-0 mt-auto">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalJahe" class="btn btn-outline-success w-100 rounded-pill">Detail</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-md-4 col-lg-3 product-item">
+                    <div class="card glass-effect border-0 rounded-4 overflow-hidden product-card shadow-sm">
+                        <img src="assets/img/minyakurutsereh.png" alt="Minyak Sereh" class="card-img-top product-img">
+                        <div class="card-body">
+                            <div>
+                                <p class="mb-1"><span class="badge bg-success bg-opacity-75">Kategori: Otot & Tulang</span></p>
+                                <span class="badge bg-success mb-2 d-inline-block">Relaksasi Otot</span>
+                            </div>
+                            <h5 class="card-title fw-bold title-clamp">Minyak Urut Sereh</h5>
+                            <p class="card-text text-secondary small mb-2">UMKM Jaya Urut</p>
+                            <div class="flex-grow-1">
+                                <p class="card-text d-none d-md-block text-secondary small desc-clamp">Melancarkan sirkulasi darah dan meredakan pegal-pegal.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3 pt-0 mt-auto">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalSereh" class="btn btn-outline-success w-100 rounded-pill">Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3 product-item">
+                    <div class="card glass-effect border-0 rounded-4 overflow-hidden product-card shadow-sm">
+                        <img src="assets/img/zativa.png" alt="Zativa" class="card-img-top product-img">
+                        <div class="card-body">
+                            <div>
+                                <p class="mb-1"><span class="badge bg-success bg-opacity-75">Kategori: Pencernaan</span></p>
+                                <span class="badge bg-success mb-2 d-inline-block">Lambung & Maag</span>
+                            </div>
+                            <h5 class="card-title fw-bold title-clamp">Zativa</h5>
+                            <p class="card-text text-secondary small mb-2">Kalbe Farma</p>
+                            <div class="flex-grow-1">
+                                <p class="card-text d-none d-md-block text-secondary small desc-clamp">Membantu memelihara kesehatan fungsi pencernaan, maag, atau GERD.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3 pt-0 mt-auto">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalZativa" class="btn btn-outline-success w-100 rounded-pill">Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3 product-item">
+                    <div class="card glass-effect border-0 rounded-4 overflow-hidden product-card shadow-sm">
+                        <img src="assets/img/herba.png" alt="Herba Histaminic" class="card-img-top product-img">
+                        <div class="card-body">
+                            <div>
+                                <p class="mb-1"><span class="badge bg-success bg-opacity-75">Kategori: Kulit & Luka</span></p>
+                                <span class="badge bg-success mb-2 d-inline-block">Anti Alergi</span>
+                            </div>
+                            <h5 class="card-title fw-bold title-clamp">Herba Histaminic</h5>
+                            <p class="card-text text-secondary small mb-2">Herbal Indo Utama</p>
+                            <div class="flex-grow-1">
+                                <p class="card-text d-none d-md-block text-secondary small desc-clamp">Mengobati gatal-gatal, alergi kulit, biduran, eksim, hingga psoriasis.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3 pt-0 mt-auto">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalHerba" class="btn btn-outline-success w-100 rounded-pill">Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3 product-item">
+                    <div class="card glass-effect border-0 rounded-4 overflow-hidden product-card shadow-sm">
+                        <img src="assets/img/asamurat.png" alt="Paket Asam Urat" class="card-img-top product-img">
+                        <div class="card-body">
+                            <div>
+                                <p class="mb-1"><span class="badge bg-success bg-opacity-75">Kategori: Tulang & Sendi</span></p>
+                                <span class="badge bg-success mb-2 d-inline-block">Pereda Nyeri</span>
+                            </div>
+                            <h5 class="card-title fw-bold title-clamp">Paket Asam Urat</h5>
+                            <p class="card-text text-secondary small mb-2">De Nature</p>
+                            <div class="flex-grow-1">
+                                <p class="card-text d-none d-md-block text-secondary small desc-clamp">Membantu meredakan pegal linu, encok, dan asam urat.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3 pt-0 mt-auto">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalAsamUrat" class="btn btn-outline-success w-100 rounded-pill">Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3 product-item">
+                    <div class="card glass-effect border-0 rounded-4 overflow-hidden product-card shadow-sm">
+                        <img src="assets/img/diagard.png" alt="Diagard" class="card-img-top product-img">
+                        <div class="card-body">
+                            <div>
+                                <p class="mb-1"><span class="badge bg-success bg-opacity-75">Kategori: Penyakit Kronis</span></p>
+                                <span class="badge bg-success mb-2 d-inline-block">Kontrol Gula Darah</span>
+                            </div>
+                            <h5 class="card-title fw-bold title-clamp">Diagard</h5>
+                            <p class="card-text text-secondary small mb-2">Nutrimax</p>
+                            <div class="flex-grow-1">
+                                <p class="card-text d-none d-md-block text-secondary small desc-clamp">Suplemen herbal kapsul untuk mengontrol dan menormalkan gula darah.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3 pt-0 mt-auto">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalDiagard" class="btn btn-outline-success w-100 rounded-pill">Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <nav aria-label="Navigasi Produk" class="mt-5">
+                <ul class="pagination justify-content-center" id="paginationUI"></ul>
+            </nav>
+        </div>
+    </section>
+
+    <div class="modal fade" id="modalTeh" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-effect rounded-4 border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-success text-white rounded-top-4">
+                    <h5 class="modal-title fw-bold">Detail Medis & Validasi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4 bg-white bg-opacity-75">
+                    <h6 class="fw-bold text-success mb-1">Teh Seduh Chamomile</h6>
+                    <p class="text-secondary small mb-3"><span class="badge bg-warning text-dark me-1">PIRT: 2103573012345</span> UMKM Sari Alam</p>
+                    <h6 class="fw-bold mt-3 border-bottom pb-2 border-success">Kandungan Utama:</h6>
+                    <ul class="text-secondary">
+                        <li class="mb-2"><strong>Apigenin:</strong> Antioksidan kuat yang memicu kantuk.</li>
+                        <li><strong>Bebas Kafein:</strong> Aman untuk lambung.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-top-0 bg-white bg-opacity-75 rounded-bottom-4">
+                    <button type="button" class="btn btn-success rounded-pill px-4" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalJahe" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-effect rounded-4 border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-success text-white rounded-top-4">
+                    <h5 class="modal-title fw-bold">Detail Medis & Validasi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4 bg-white bg-opacity-75">
+                    <h6 class="fw-bold text-success mb-1">Jahe Merah Instan</h6>
+                    <p class="text-secondary small mb-3"><span class="badge bg-warning text-dark me-1">BPOM TR 123456781</span> UMKM Berkah Jahe</p>
+                    <h6 class="fw-bold mt-3 border-bottom pb-2 border-success">Kandungan Utama:</h6>
+                    <ul class="text-secondary">
+                        <li class="mb-2"><strong>Gingerol:</strong> Zat anti-inflamasi meredakan radang tenggorokan.</li>
+                        <li><strong>Zingerone:</strong> Memberikan efek hangat pada tubuh.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-top-0 bg-white bg-opacity-75 rounded-bottom-4">
+                    <button type="button" class="btn btn-success rounded-pill px-4" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSereh" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-effect rounded-4 border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-success text-white rounded-top-4">
+                    <h5 class="modal-title fw-bold">Detail Medis & Validasi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4 bg-white bg-opacity-75">
+                    <h6 class="fw-bold text-success mb-1">Minyak Urut Sereh</h6>
+                    <p class="text-secondary small mb-3"><span class="badge bg-warning text-dark me-1">BPOM TR 987654321</span> UMKM Jaya Urut</p>
+                    <h6 class="fw-bold mt-3 border-bottom pb-2 border-success">Kandungan Utama:</h6>
+                    <ul class="text-secondary">
+                        <li class="mb-2"><strong>Citronella Oil:</strong> Melancarkan peredaran darah perifer.</li>
+                        <li><strong>Analgesik Alami:</strong> Meredakan ketegangan otot dan saraf.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-top-0 bg-white bg-opacity-75 rounded-bottom-4">
+                    <button type="button" class="btn btn-success rounded-pill px-4" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalZativa" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-effect rounded-4 border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-success text-white rounded-top-4">
+                    <h5 class="modal-title fw-bold">Detail Medis & Validasi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4 bg-white bg-opacity-75">
+                    <h6 class="fw-bold text-success mb-1">Zativa</h6>
+                    <p class="text-secondary small mb-3"><span class="badge bg-warning text-dark me-1">BPOM TR Terdaftar</span> Kalbe Farma</p>
+                    <h6 class="fw-bold mt-3 border-bottom pb-2 border-success">Kandungan Utama:</h6>
+                    <ul class="text-secondary">
+                        <li class="mb-2"><strong>Ekstrak Habbatussauda:</strong> Menjaga imunitas dan anti-inflamasi usus.</li>
+                        <li class="mb-2"><strong>Kunyit & Temulawak:</strong> Curcumin untuk meredakan radang lambung (GERD).</li>
+                    </ul>
+                    <h6 class="fw-bold mt-3 border-bottom pb-2 border-success">Dosis & Anjuran:</h6>
+                    <p class="text-secondary small">1-2 kapsul, 1 kali sehari setelah makan. Tersedia di apotek terdekat.</p>
+                </div>
+                <div class="modal-footer border-top-0 bg-white bg-opacity-75 rounded-bottom-4">
+                    <button type="button" class="btn btn-success rounded-pill px-4" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalHerba" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-effect rounded-4 border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-success text-white rounded-top-4">
+                    <h5 class="modal-title fw-bold">Detail Medis & Validasi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4 bg-white bg-opacity-75">
+                    <h6 class="fw-bold text-success mb-1">Herba Histaminic</h6>
+                    <p class="text-secondary small mb-3"><span class="badge bg-warning text-dark me-1">POM TR 133 372 301</span> Herbal Indo Utama (HIU)</p>
+                    <h6 class="fw-bold mt-3 border-bottom pb-2 border-success">Khasiat & Fungsi:</h6>
+                    <ul class="text-secondary">
+                        <li class="mb-2">Membantu mengobati gatal-gatal, alergi kulit, dan biduran.</li>
+                        <li class="mb-2">Efektif untuk masalah eksim, kudis, kadas, kurap, bisul, dan psoriasis.</li>
+                    </ul>
+                    <h6 class="fw-bold mt-3 border-bottom pb-2 border-success">Dosis & Anjuran:</h6>
+                    <p class="text-secondary small">Suplemen herbal berisi 60 kapsul. Konsumsi sesuai petunjuk kemasan. Tersedia di toko obat herbal.</p>
+                </div>
+                <div class="modal-footer border-top-0 bg-white bg-opacity-75 rounded-bottom-4">
+                    <button type="button" class="btn btn-success rounded-pill px-4" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAsamUrat" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-effect rounded-4 border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-success text-white rounded-top-4">
+                    <h5 class="modal-title fw-bold">Detail Medis & Validasi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4 bg-white bg-opacity-75">
+                    <h6 class="fw-bold text-success mb-1">Paket Herbal Asam Urat</h6>
+                    <p class="text-secondary small mb-3"><span class="badge bg-warning text-dark me-1">BPOM TR 173 300 321</span> PT De Nature Indonesia</p>
+                    <h6 class="fw-bold mt-3 border-bottom pb-2 border-success">Isi Paket & Khasiat:</h6>
+                    <ul class="text-secondary">
+                        <li class="mb-2"><strong>Samurago & Habatop 3 in 1:</strong> Kombinasi ekstrak herbal alami.</li>
+                        <li class="mb-2">Membantu meredakan pegal linu, menurunkan kadar asam urat, mengobati radang sendi, dan imunitas.</li>
+                    </ul>
+                    <h6 class="fw-bold mt-3 border-bottom pb-2 border-success">Anjuran:</h6>
+                    <p class="text-secondary small">Gunakan secara rutin. Produk ini merupakan Jamu Obat Tradisional berlisensi.</p>
+                </div>
+                <div class="modal-footer border-top-0 bg-white bg-opacity-75 rounded-bottom-4">
+                    <button type="button" class="btn btn-success rounded-pill px-4" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDiagard" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-effect rounded-4 border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 bg-success text-white rounded-top-4">
+                    <h5 class="modal-title fw-bold">Detail Medis & Validasi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4 bg-white bg-opacity-75">
+                    <h6 class="fw-bold text-success mb-1">Diagard</h6>
+                    <p class="text-secondary small mb-3"><span class="badge bg-warning text-dark me-1">BPOM Terdaftar</span> Nutrimax</p>
+                    <h6 class="fw-bold mt-3 border-bottom pb-2 border-success">Kandungan Utama:</h6>
+                    <ul class="text-secondary">
+                        <li class="mb-2"><strong>Bitter Melon & Gymnema Sylvestre:</strong> Ekstrak botani untuk menghambat penyerapan gula.</li>
+                        <li class="mb-2"><strong>Alpha Lipoic Acid & Chromemate:</strong> Membantu mengontrol dan menormalkan glukosa darah.</li>
+                    </ul>
+                    <h6 class="fw-bold mt-3 border-bottom pb-2 border-success">Dosis:</h6>
+                    <p class="text-secondary small">Kapsul botol hijau. Dapatkan di apotek resmi terdekat.</p>
+                </div>
+                <div class="modal-footer border-top-0 bg-white bg-opacity-75 rounded-bottom-4">
+                    <button type="button" class="btn btn-success rounded-pill px-4" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center mb-5 pb-lg-4">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold text-success mb-3">Membawa UMKM Lokal ke Era Digital</h2>
+                    <p class="text-secondary lead mb-3">Healthy Playbook lahir dari semangat tema <strong>INNOVATE</strong>. Kami percaya produk kesehatan lokal memiliki potensi luar biasa jika dipadukan teknologi cerdas.</p>
+                    <p class="text-secondary">Misi kami bukan sekedar membuat katalog, melainkan menjembatani masyarakat dengan para pelaku UMKM lokal yang produknya tervalidasi, aman, dan berkhasiat.</p>
+                    <p class="text-secondary mb-4">Visi kami menjadi kompas digital utama yang mentransformasi kearifan herbal Nusantara menjadi standar gaya hidup sehat modern.</p>
+                    <a href="#mitra" class="btn btn-outline-success rounded-pill px-4 shadow-sm">Gabung Sebagai Mitra</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="assets/img/ilustrasiherbal.png" alt="Visi Healthy Playbook" class="img-fluid rounded-4 shadow-sm">
+                </div>
+            </div>
+            
+            <div class="text-center mb-5">
+                <h3 class="fw-bold text-dark">Tim Pengembang</h3>
+                <p class="text-secondary">Kombinasi teknis dan analitis di balik inovasi ini</p>
+            </div>
+            
+            <div class="row justify-content-center g-3 g-md-4">
+                <div class="col-6 col-md-5 col-lg-4">
+                    <div class="card glass-effect border-0 shadow-sm rounded-4 h-100 text-center team-card py-3 py-lg-4">
+                        <div class="card-body p-2 p-lg-4">
+                            <img src="assets/img/profil2.jpg" alt="Akhtar" class="rounded-circle mb-2 mb-lg-3 shadow-sm border border-3 border-success team-img" width="100" height="100" style="object-fit: cover;">
+                            <h5 class="fw-bold mb-1 text-dark team-name">Akhtar</h5>
+                            <span class="badge bg-success mb-2 team-role">Lead Web Developer</span>
+                            <p class="text-secondary small px-1 px-lg-3 team-desc">Merancang arsitektur website, UI/UX modern, serta mengembangkan AI cerdas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-6 col-md-5 col-lg-4">
+                    <div class="card glass-effect border-0 shadow-sm rounded-4 h-100 text-center team-card py-3 py-lg-4">
+                        <div class="card-body p-2 p-lg-4">
+                            <img src="assets/img/profil1.jpg" alt="Nadlia" class="rounded-circle mb-2 mb-lg-3 shadow-sm border border-3 border-success team-img" width="100" height="100" style="object-fit: cover;">
+                            <h5 class="fw-bold mb-1 text-dark team-name">Nadlia Putri</h5>
+                            <span class="badge bg-success mb-2 team-role">Lead Communicator</span>
+                            <p class="text-secondary small px-1 px-lg-3 team-desc">Meriset data UMKM, memvalidasi medis, dan mempresentasikan inovasi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MITRA -->
+    <section class="py-5" id="mitra">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-success">Bergabung Menjadi Mitra</h2>
+                <p class="text-secondary">Punya produk herbal berkualitas? Daftarkan UMKM Anda sekarang.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card glass-effect border-0 shadow-sm rounded-4 p-4 p-lg-5">
+                        <form id="formMitra">
+                            <div class="mb-3">
+                                <label for="namaProduk" class="form-label fw-bold">Nama Produk <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-pill px-4 py-2 border-0 shadow-sm" id="namaProduk" placeholder="Contoh: Jahe Merah" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="namaUmkm" class="form-label fw-bold">Nama UMKM <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-pill px-4 py-2 border-0 shadow-sm" id="namaUmkm" placeholder="Contoh: PT. Jahe Berkah" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="kategori" class="form-label fw-bold">Kategori Produk <span class="text-danger">*</span></label>
+                                <select id="kategori" class="form-select rounded-pill px-4 py-2 border-0 shadow-sm" required>
+                                    <option value="" selected disabled>Pilih Kategori...</option>
+                                    <option value="Imunitas">Imunitas</option>
+                                    <option value="Pencernaan">Pencernaan</option>
+                                    <option value="Kulit">Kulit & Luka</option>
+                                    <option value="Relaksasi">Relaksasi</option>
+                                    <option value="Relaksasi">Lainnya</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="deskripsi" class="form-label fw-bold">Khasiat <span class="text-danger">*</span></label>
+                                <textarea id="deskripsi" class="form-control rounded-4 p-4 border-0 shadow-sm" rows="3" placeholder="Contoh: Meningkatkan imun tubuh" required></textarea>
+                            </div>
+                            <div class="mb-4">
+                                <label for="fotoProduk" class="form-label fw-bold">Upload Foto Produk</label>
+                                <input type="file" class="form-control rounded-pill px-4 py-2 border-0 shadow-sm" id="fotoProduk" accept="image/*">
+                            </div>
+                            <div class="d-grid mt-4">
+                                <button class="btn btn-success btn-lg rounded-pill shadow-sm" type="submit">Kirim Data</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
